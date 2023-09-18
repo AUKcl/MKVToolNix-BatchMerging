@@ -67,4 +67,4 @@ TV
 11. 脚本根据`output.txt`内容自动执行命令，完成封装
 
 ## 许可证
-GPLv3 © [AUKcl]()
+GPLv3 © [AUKcl](https://github.com/AUKcl/MKVToolNix-BatchMerging/blob/main/LICENSE.md)
