@@ -1,7 +1,7 @@
 # MKVToolNix-BatchMerging
 
 ## 描述
-使用mkvtoolnix自动化快速批量合成电视剧或TV动画，暂只支持Windows
+使用mkvtoolnix自动化快速批量合成电视剧或TV动画，支持Windows、macOS、Linux
 
 ## 依赖
 - [MKVToolNix](https://mkvtoolnix.download/downloads.html)
