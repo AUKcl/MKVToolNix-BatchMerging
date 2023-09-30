@@ -18,6 +18,7 @@
 #    AUKcl's email:kaixuan135@outloook.com
 
 import subprocess
+import os
 
 def generate_and_replace_lines(base_line, target_string, num_lines):
     lines = []
@@ -30,8 +31,12 @@ def generate_and_replace_lines(base_line, target_string, num_lines):
         replaced_line = base_line.replace(target_string, f"{target_string[:-2]}{i:02d}")
         lines.append(replaced_line)
 
+    # 获取脚本所在目录并创建跨平台的文件路径
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    output_file_path = os.path.join(script_dir, "output.txt")
+
     # 将所有行内容写入文件
-    with open("output.txt", "w") as f:
+    with open(output_file_path, "w", newline='') as f:
         for line in lines:
             f.write(line + "\n")
 
@@ -45,7 +50,7 @@ num_lines = int(input("请输入要封装的集数："))
 # 调用函数生成并替换行内容
 generate_and_replace_lines(base_line, target_string, num_lines)
 
-# 逐行读取output.txt文件内容，并作为命令在cmd中执行
+# 逐行读取output.txt文件内容，并作为命令执行
 with open("output.txt", "r") as f:
     for line in f:
         command = line.strip()  # 移除行末尾的换行符
