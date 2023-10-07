@@ -1,5 +1,5 @@
 #    MKVToolNix-BatchMerging
-#    Automate fast batch merging of TV series or TV animations using mkvtoolnix, currently only supported on Windows.
+#    Automate Rapid Batch Concatenation of TV Shows or TV Animations using mkvtoolnix, supporting Windows, macOS, Linux.
 #    Copyright (C) <2023>  <AUKcl>
 #
 #    This program is free software: you can redistribute it and/or modify
