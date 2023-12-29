@@ -36,7 +36,7 @@ def generate_and_replace_lines(base_line, target_string, num_lines):
     output_file_path = os.path.join(script_dir, "output.txt")
 
     # 将所有行内容写入文件
-    with open(output_file_path, "w", newline='') as f:
+    with open(output_file_path, "w", newline='', encoding='utf-8') as f:
         for line in lines:
             f.write(line + "\n")
 
@@ -51,7 +51,7 @@ num_lines = int(input("请输入要封装的集数："))
 generate_and_replace_lines(base_line, target_string, num_lines)
 
 # 逐行读取output.txt文件内容，并作为命令执行
-with open("output.txt", "r") as f:
+with open("output.txt", "r", encoding='utf-8') as f:
     for line in f:
         command = line.strip()  # 移除行末尾的换行符
         subprocess.run(command, shell=True)
